@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="preview">
+                <img src="/IMAGES/arrow.png" id="prev">
+                <img src="/IMAGES/arrow.png" id="next">
+            <img src="/IMAGES/close.png" id="close">
+            <img src="/IMAGES/img1.jpg" id="ProductImg">
+            <div class="controller">
+                <small>Loading</small>
+                <div class="load-anime">
+                    <p></p>
+                </div>
+                <div class="blink">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="/IMAGES/img1.jpg" class="smallImg">
+            </div>
+            <div class="col">
+                <img src="/IMAGES/img2.jpg"  class="smallImg">
+            </div>
+            <div class="col">
+                <img src="/IMAGES/img3.jpg"  class="smallImg">
+            </div>
+            <div class="col">
+                <img src="/IMAGES/img4.jpg"  class="smallImg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="/IMAGES/img5.jpg" class="smallImg">
+            </div>
+            <div class="col">
+                <img src="/IMAGES/img6.jpg"  class="smallImg">
+            </div>
+            <div class="col">
+                <img src="/IMAGES/img7.jpg"  class="smallImg">
+            </div>
+            <div class="col">
+                <img src="/IMAGES/img8.jpg"  class="smallImg">
+            </div>
+        </div>
+    </div>
+    <script>
+        var close = document.getElementById('close');
+        var preview = document.getElementById('preview');
+        var ProductImg = document.getElementById('ProductImg');
+        var smallImg = document.getElementsByClassName('smallImg');
+        var next = document.getElementById('next');
+        var prev = document.getElementById('prev');
+
+        //close function
+        close.onclick =()=>{
+            preview.style.display = "none";
+        }
+        //preview image display
+        smallImg[0].onclick =()=>{
+            preview.style.display = "block";
+            ProductImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick =()=>{
+            preview.style.display = "block";
+            ProductImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick =()=>{
+            preview.style.display = "block";
+            ProductImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick =()=>{
+            preview.style.display = "block";
+            ProductImg.src = smallImg[3].src;
+        }
+        smallImg[4].onclick =()=>{
+            preview.style.display = "block";
+            ProductImg.src = smallImg[4].src;
+        }
+        smallImg[5].onclick =()=>{
+            preview.style.display = "block";
+            ProductImg.src = smallImg[5].src;
+        }
+        smallImg[6].onclick =()=>{
+            preview.style.display = "block";
+            ProductImg.src = smallImg[6].src;
+        }
+        smallImg[7].onclick =()=>{
+            preview.style.display = "block";
+            ProductImg.src = smallImg[7].src;
+        }
+        //controls javascript
+        let i =0;
+        next.onclick =()=>{
+            ProductImg.src = smallImg[i+1].src;
+            i++;
+        }
+        prev.onclick =()=>{
+            ProductImg.src = smallImg[i-1].src;
+            i--;
+        }
+    </script>
+</body>
+</html>
